@@ -42,18 +42,22 @@ const AllStudent = () => {
           <th>Student Id</th>
           <th>Student Name</th>
           <th>Email</th>
-          <th>Gender</th>
+          {/* <th>Gender</th> */}
           <th>Address</th>
+          <th>Phone</th>
+          <th>Level</th>
           <th>Remove</th>
         </tr>
         {student.map((s) => {
           return (
             <tr key={s.student_id}>
               <td>{s.student_id}</td>
-              <td>{s.student_name}</td>
+              <td>{s.name}</td>
               <td>{s.email}</td>
-              <td>{s.gender}</td>
+              {/* <td>{s.gender}</td> */}
               <td>{s.address}</td>
+              <td>{s.phone}</td>
+              <td>{s.edulevel}</td>
               {/* <td>
                 <button type="button-green">
                   <Go url={`/updateCourse/${s.student_id}`} title="Edit"></Go>

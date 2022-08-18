@@ -126,6 +126,7 @@ const UpdateCourse = () => {
                   name="course_name"
                   value={course.course_name}
                   onChange={HandleInput}
+                  required
                 ></input>
               </td>
               <td>
@@ -140,6 +141,7 @@ const UpdateCourse = () => {
                   name="catagory"
                   value={course.catagory}
                   onChange={HandleInput}
+                  required
                 ></input>
               </td>
               <td>
@@ -154,6 +156,7 @@ const UpdateCourse = () => {
                   name="price"
                   value={course.price}
                   onChange={HandleInput}
+                  required
                 ></input>
               </td>
               <td>
@@ -168,6 +171,7 @@ const UpdateCourse = () => {
                   name="duration"
                   value={course.duration}
                   onChange={HandleInput}
+                  required
                 ></input>
               </td>
               <td>
@@ -184,12 +188,44 @@ const UpdateCourse = () => {
                   name="student_count"
                   value={course.student_count}
                   onChange={HandleInput}
+                  required
                 ></input>
               </td>
               <td>
                 <span>
                   {error.studentCapacity ? error.studentCapacity[0] : ""}
                 </span>
+              </td>
+            </th>
+            {/* mod */}
+            <th>
+              <td>Description:</td>
+              <td>
+                <input
+                  type="text"
+                  name="description"
+                  value={course.description}
+                  onChange={HandleInput}
+                  required
+                ></input>
+              </td>
+              <td>
+                <span>{error.description ? error.description[0] : ""}</span>
+              </td>
+            </th>
+            <th>
+              <td>Assign New Teacher?</td>
+              <td>
+                <input
+                  type="text"
+                  name="t_id"
+                  value={course.t_id}
+                  onChange={HandleInput}
+                  required
+                ></input>
+              </td>
+              <td>
+                <span>{error.t_id ? error.t_id[0] : ""}</span>
               </td>
             </th>
             <th colSpan="2">

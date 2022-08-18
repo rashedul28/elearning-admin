@@ -1,0 +1,22 @@
+#card {
+  box-shadow: 0 4px 8px 0 rgb(214, 234, 248);
+  transition: 0.3s;
+  width: 30%;
+  display: flex;
+  right: 0px;
+}
+
+#card:hover {
+  box-shadow: 0 8px 16px 0 rgb(9, 246, 244);
+}
+
+#container {
+  padding: 10px 10px;
+}
+
+#digit{
+    align-content: flex-end;
+    text-align:center;
+    font-size: 50px;
+}
+

@@ -46,6 +46,8 @@ const AllCourse = () => {
           <th>Price</th>
           <th>Capacity</th>
           <th>Duration</th>
+          <th>Description</th>
+          <th>Assign TID</th>
           <th>Course Created</th>
           <th>Last Update</th>
           <th>Banner</th>
@@ -61,6 +63,8 @@ const AllCourse = () => {
               <td>{c.price}</td>
               <td>{c.student_count}</td>
               <td>{c.duration}</td>
+              <td>{c.description}</td>
+              <td>{c.t_id}</td>
               <td>{c.created_at}</td>
               <td>{c.updated_at}</td>
               <td>{c.profile_image}</td>

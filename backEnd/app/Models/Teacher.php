@@ -10,4 +10,6 @@ class Teacher extends Model
     use HasFactory;
     protected $table='teachers';
     protected $primaryKey='teacher_id';
+    public $timestamps = false;
+
 }

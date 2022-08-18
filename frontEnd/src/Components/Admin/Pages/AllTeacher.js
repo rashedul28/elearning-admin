@@ -44,7 +44,7 @@ const AllTeacher = () => {
           <th>Email</th>
           <th>Phone</th>
           <th>DOB</th>
-          <th>Gender</th>
+          {/* <th>Gender</th> */}
           <th>Degree</th>
           <th>Address</th>
           <th>Remove</th>
@@ -53,12 +53,12 @@ const AllTeacher = () => {
           return (
             <tr key={t.teacher_id}>
               <td>{t.teacher_id}</td>
-              <td>{t.teacher_name}</td>
+              <td>{t.name}</td>
               <td>{t.email}</td>
               <td>{t.phone}</td>
               <td>{t.dob}</td>
-              <td>{t.gender}</td>
-              <td>{t.degree}</td>
+              {/* <td>{t.gender}</td> */}
+              <td>{t.qualification}</td>
               <td>{t.address}</td>
               {/* <td>
                 <button type="button-green">
