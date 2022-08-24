@@ -17,7 +17,7 @@ const WaitingTeacher = () => {
       },
       (error) => {}
     );
-  }, []);
+  }, []); 
 
   const acceptCourse = (e, email) => {
     e.preventDefault();

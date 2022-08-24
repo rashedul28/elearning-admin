@@ -5,8 +5,16 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "bootstrap/dist/css/bootstrap.css";
+import {useEffect, useState} from "react";
+
 
 function NavigationBar() {
+
+  const [token, setToken] = useState(localStorage.getItem("token"));
+  useEffect(()=>{
+    setToken(localStorage.getItem("token"));
+  },[localStorage.getItem("token")]);
+  console.log(token);
   return (
     <div>
       {/* <ul>
@@ -71,14 +79,17 @@ function NavigationBar() {
               </NavDropdown>
             </Nav>
             <Nav>
+            {token ? (
               <Nav.Link>
                 <Go url="/logout" title="LogOut" />
               </Nav.Link>
-              <Nav.Link>
+          ) : (
+            <Nav.Link>
                 <Go url="/login" title="Login"></Go>
               </Nav.Link>
+            )}
             </Nav>
-          </Navbar.Collapse>
+            </Navbar.Collapse>
         </Container>
       </Navbar>
     </div>

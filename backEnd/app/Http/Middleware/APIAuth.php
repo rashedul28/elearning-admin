@@ -24,11 +24,11 @@ class APIAuth
             if($key){
                 return $next($request);
             }else{
-                return response()->json(["msg"=>"Supplied Token is invalid or expired"]); 
+                return response()->json(["msg"=>"Log in session expired"]); 
             }
             
         }else{
-            return response()->json(["msg"=>"No token supplied"]);
+            return response()->json(["msg"=>"First you need to login"]);
         }
         
     }

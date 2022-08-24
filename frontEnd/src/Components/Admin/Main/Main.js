@@ -15,7 +15,7 @@ const Main = () => {
   return (
     <div>
       <BrowserRouter>
-        <NavigationBar></NavigationBar>
+        <NavigationBar />
         <Routes>
           <Route path="/" element={<Login></Login>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>

@@ -14,6 +14,7 @@ const Logout = () => {
       (rsp) => {
         swal("success", "Signing Out Ok", "success");
         nav("/login");
+        localStorage.setItem("token", "");
       },
       (error) => {
         swal("error", "Not working", "error");
